@@ -1,5 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 @import '~primeicons/primeicons.css';
 @import '~primeng/resources/themes/arya-orange/theme.css';
 @import '~primeng/resources/primeng.min.css';
+@import '~primeflex/primeflex.css';
+.p-tree {
+  padding: 0;
+}
+
+.p-treenode-content {
+  padding: 0 !important;
+}
