@@ -1,12 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, Input } from '@angular/core'
+import { Channel } from '../../models/channel'
+import { MenuItem } from 'primeng/api'
 
 @Component({
   selector: 'message-header',
-  template: ` Channel: {{ title }} `,
+  template: ` <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb> `,
 })
-export class HeaderComponent implements OnInit {
-  @Input() title: string
-  constructor() {}
+export class HeaderComponent {
+  @Input() channel: Channel
+  home = { icon: 'pi pi-home', routerLink: '/' }
 
-  ngOnInit(): void {}
+  get items(): MenuItem[] {
+    return [{ label: this.channel?.label }]
+  }
 }

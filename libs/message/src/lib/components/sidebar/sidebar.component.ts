@@ -1,11 +1,12 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
-import { TreeNode } from 'primeng/api'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { Channel } from '../../models/channel'
+import { Category } from '../../models/category'
 
 @Component({
   selector: 'message-sidebar',
   template: `
     <p-tree
-      [value]="channels"
+      [value]="categories"
       selectionMode="single"
       (selectionChange)="selectItem($event)"
     ></p-tree>
@@ -13,8 +14,8 @@ import { TreeNode } from 'primeng/api'
   styles: [],
 })
 export class SidebarComponent {
-  @Output() selectChannel = new EventEmitter<TreeNode>()
-  @Input() channels: TreeNode[] = []
+  @Output() selectChannel = new EventEmitter<Channel>()
+  @Input() categories: Category[] = []
 
   selectItem(item: any) {
     this.selectChannel.emit(item)

@@ -1,12 +1,17 @@
 <div class="p-grid">
   <div class="p-col-fixed" style="width: 250px;">
     <message-sidebar
-      [channels]="channels"
+      [categories]="categories$ | async"
       (selectChannel)="selectChannel($event)"
     ></message-sidebar>
   </div>
   <div class="p-col">
-    <message-header [title]="selectedChannel?.label"></message-header>
-    <message-messages></message-messages>
+    <ng-template #noChannel>
+      Please select channel
+    </ng-template>
+    <ng-container *ngIf="selectedChannel$ | async as selected; else noChannel">
+      <message-header [channel]="selected"></message-header>
+      <message-messages [messages]="message$ | async"></message-messages>
+    </ng-container>
   </div>
 </div>
