@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
+import { UiModule } from '@beehive-chat/ui'
 
 import { AppComponent } from './app.component'
 import { RouterModule } from '@angular/router'
@@ -9,6 +10,7 @@ import { RouterModule } from '@angular/router'
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    UiModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
