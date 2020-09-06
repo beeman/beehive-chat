@@ -13,6 +13,11 @@ export class HeaderComponent {
       icon: 'pi pi-fw pi-home',
     },
     {
+      label: 'Chat',
+      routerLink: '/chat',
+      icon: 'pi pi-fw pi-inbox',
+    },
+    {
       label: 'About',
       routerLink: '/about',
       icon: 'pi pi-fw pi-info',

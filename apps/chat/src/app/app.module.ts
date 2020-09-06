@@ -15,6 +15,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('@beehive-chat/pages').then((m) => m.PagesModule),
       },
+      {
+        path: '',
+        loadChildren: () =>
+          import('@beehive-chat/message').then((m) => m.MessageModule),
+      },
     ],
   },
 ]

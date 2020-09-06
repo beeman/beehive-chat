@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "@beehive-chat/ui": ["libs/ui/src/index.ts"],
-      "@beehive-chat/pages": ["libs/pages/src/index.ts"]
+      "@beehive-chat/pages": ["libs/pages/src/index.ts"],
+      "@beehive-chat/message": ["libs/message/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
