@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core'
-import { ButtonModule } from 'primeng/button'
 
-const MODULES = [ButtonModule]
+import { MenubarModule } from 'primeng/menubar'
+
+const MODULES = [MenubarModule]
 
 @NgModule({
   imports: [...MODULES],
